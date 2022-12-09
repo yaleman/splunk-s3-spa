@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1>Current fail2ban list</h1>
+    <script>
+    $.getJSON( "./fail2ban.json", function( data ) {
+        var items = [];
+
+        $.each( data, function( object ) {
+            var element = data[object];
+
+          items.push( "<li id='" + element["ip"] + element["jail"] + "'>" + element["ip"] + "</li>" );
+        });
+
+        $( "<ul/>", {
+          "class": "my-new-list",
+          html: items.join( "" )
+        }).appendTo( "body" );
+      });
+    </script>
+</body>
+</html>
