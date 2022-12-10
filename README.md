@@ -1,5 +1,7 @@
 # Running a single page app using Splunk and S3
 
+You can see this working here: <https://yaleman.github.io/splunk-s3-spa/fail2ban.html>
+
 Requirements:
 
 - Something vaguely S3-like.
