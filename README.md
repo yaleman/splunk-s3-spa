@@ -14,7 +14,7 @@ In this example I'm just using the data from my regular fail2ban export:
 ```json
 [
     {"ip": "1.2.3.4", "jail": "sshd"},
-    {"ip": "5,6,7,8", "jail": "http"}
+    {"ip": "5.6.7.8", "jail": "http"}
 ]
 ```
 
