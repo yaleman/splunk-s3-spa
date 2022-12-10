@@ -14,7 +14,7 @@
         $.each( data, function( object ) {
             var element = data[object];
 
-          items.push( "<li id='" + element["ip"] + element["jail"] + "'>" + element["ip"] + "</li>" );
+          items.push( "<li id='" + element["ip"] + element["jail"] + "'>" + element["ip"] + "(" + element["jail"] + ")</li>" );
         });
 
         $( "<ul/>", {
